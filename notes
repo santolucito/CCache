@@ -1,0 +1,7 @@
+man clock_gettime
+function that will allow me to specify resoliution and passes back current time. sort of same a zentimer. trick is that:
+<tv_sec>.<tv_ncec> like 7.230 seconds both 32 bits
+
+use #include <time.h>
+
+in Makefile use $gcc ..... -lrt

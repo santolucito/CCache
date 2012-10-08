@@ -1,0 +1,76 @@
+CC = g++
+CFLAGS = -g -O2
+INCLUDEFLAGS = -I ./lzo/include/ -I ./WKdm/ -I ./WK2/ -I ./lzrw1/
+LDFLAGS = -llzo -lz -lm
+LDPATH = -L ./lzo/
+OBJS = test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o \
+	WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdmWithLZOTester.o \
+	WKdmIntoLZOTester.o WKdm-24-8Tester.o
+COMPRESSORS = WKdm/WKdm.o \
+		WK2/WK2.o \
+		lzrw1/lzrw1.o \
+EXECUTABLE = ./test-compression
+#EXECUTABLE = ../../$(HOSTTYPE)/test-compression
+
+default: $(OBJS)
+	$(CC) $(LDPATH) $(CFLAGS) -o $(EXECUTABLE) $(OBJS) $(COMPRESSORS) $(LDFLAGS)
+
+clean:
+	rm -f *.o *~ $(EXECUTABLE)
+
+test-compression.o: test-compression.cc \
+		    safezlib.hh \
+		    TraceRecord.hh \
+		    CompressionAlgorithmTester.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c test-compression.cc
+
+TraceRecord.o: TraceRecord.cc TraceRecord.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c TraceRecord.cc
+
+CompressionAlgorithmTester.o: CompressionAlgorithmTester.cc \
+			      CompressionAlgorithmTester.hh \
+			      safezlib.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c CompressionAlgorithmTester.cc
+
+safezlib.o: safezlib.cc safezlib.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c safezlib.cc
+
+WKdmTester.o: CompressionAlgorithmTester.hh \
+	      CompressionAlgorithmTester.cc \
+	      WKdmTester.hh \
+	      WKdmTester.cc
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c WKdmTester.cc
+
+WKdm-24-8Tester.o: CompressionAlgorithmTester.hh \
+	      CompressionAlgorithmTester.cc \
+	      WKdm-24-8Tester.hh \
+	      WKdm-24-8Tester.cc
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c WKdm-24-8Tester.cc
+
+LZOTester.o: CompressionAlgorithmTester.hh \
+	     CompressionAlgorithmTester.cc \
+	     LZOTester.hh \
+	     LZOTester.cc
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c LZOTester.cc
+
+LZRW1Tester.o: CompressionAlgorithmTester.hh \
+	       CompressionAlgorithmTester.cc \
+	       LZRW1Tester.hh \
+	       LZRW1Tester.cc
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c LZRW1Tester.cc
+
+WK2Tester.o: CompressionAlgorithmTester.hh \
+	     CompressionAlgorithmTester.cc \
+	     LZRW1Tester.hh \
+	     LZRW1Tester.cc
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c WK2Tester.cc
+
+WKdmWithLZOTester.o: CompressionAlgorithmTester.hh \
+	     	     CompressionAlgorithmTester.cc \
+		     WKdmWithLZOTester.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c WKdmWithLZOTester.cc
+
+WKdmIntoLZOTester.o: CompressionAlgorithmTester.hh \
+	     	     CompressionAlgorithmTester.cc \
+		     WKdmIntoLZOTester.hh
+	$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c WKdmIntoLZOTester.cc

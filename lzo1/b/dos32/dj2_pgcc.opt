@@ -1,0 +1,6 @@
+-mpentium
+-O6
+-fomit-frame-pointer
+-fno-strength-reduce
+-fno-unroll-all-loops
+-fno-unroll-loops

@@ -1,0 +1,126 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:576: checking for a BSD compatible install
+configure:629: checking whether build environment is sane
+configure:686: checking whether make sets ${MAKE}
+configure:732: checking for working aclocal
+configure:745: checking for working autoconf
+configure:758: checking for working automake
+configure:771: checking for working autoheader
+configure:784: checking for working makeinfo
+configure:807: checking host system type
+configure:829: checking whether to enable maintainer-specific portions of Makefiles
+configure:857: checking whether we are using GNU make
+configure:987: checking for gcc
+configure:1064: checking whether the C compiler (gcc  ) works
+configure:1078: gcc -o conftest    conftest.c  1>&5
+configure:1098: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1103: checking whether we are using GNU C
+configure:1127: checking whether gcc accepts -g
+configure:1158: checking for gcc option to accept ANSI C
+configure:1235: checking how to run the C preprocessor
+configure:1297: checking whether gcc and cc understand -c and -o together
+configure:1348: checking how the compiler promotes integrals
+configure:1380: checking whether we are using checkergcc
+configure:1400: checking for Cygwin32 environment
+configure:1429: checking for Mingw32 environment
+configure:1460: checking for executable suffix
+configure:1514: checking whether to build a debug version
+configure:1528: checking whether to build a profiling version
+configure:1541: checking whether to build a coverage version
+configure:1595: checking for ranlib
+configure:1634: checking for ld used by GCC
+configure:1691: checking if the linker (/usr/ccs/bin/ld) is GNU ld
+configure:1707: checking for BSD-compatible nm
+configure:1744: checking whether ln -s works
+configure:1833: checking for nasm
+configure:1869: checking for zlibVersion in -lz
+configure:1928: checking for ANSI C header files
+configure:2032: checking whether time.h and sys/time.h may both be included
+configure:2070: checking for assert.h
+configure:2070: checking for ctype.h
+configure:2070: checking for limits.h
+configure:2070: checking for stddef.h
+configure:2070: checking for time.h
+configure:2110: checking for malloc.h
+configure:2110: checking for memory.h
+configure:2110: checking for unistd.h
+configure:2150: checking for sys/param.h
+configure:2150: checking for sys/resource.h
+configure:2150: checking for sys/time.h
+configure:2150: checking for sys/times.h
+configure:2190: checking for endian.h
+configure:2190: checking for sys/endian.h
+configure:2190: checking for unchecked.h
+configure:2230: checking for lzoconf.h
+configure:2230: checking for zlib.h
+configure:2271: checking whether limits.h is sane
+configure:2355: checking for ptrdiff_t
+configure:2388: checking for size_t
+configure:2422: checking size of unsigned short
+configure:2461: checking size of unsigned
+configure:2500: checking size of unsigned long
+configure:2539: checking size of char *
+configure:2578: checking size of ptrdiff_t
+configure:2620: checking size of size_t
+configure:2668: checking for working const
+configure:2744: checking the byte order
+configure:2798: checking for memcmp
+configure:2798: checking for memcpy
+configure:2798: checking for memmove
+configure:2798: checking for memset
+configure:2853: checking for memicmp
+configure:2853: checking for strcasecmp
+configure:2853: checking for strncasecmp
+configure:2853: checking for stricmp
+configure:2853: checking for strnicmp
+configure:2908: checking for fstat
+configure:2908: checking for getrusage
+configure:2908: checking for gettimeofday
+configure:2908: checking for stat
+configure:2908: checking for times
+configure:2961: checking for 8-bit clean memcmp
+configure:3010: checking whether signed to unsigned casting is broken
+configure:3042: checking whether gcc suffers the -fschedule-insns bug
+configure:3085: checking whether gcc suffers the -fstrength-reduce bug
+configure:3251: checking the alignment of the assembler
+configure:3321: checking whether global symbols need underscores
+configure:3341: gcc -o conftest    conftest.c  1>&5
+/usr/ccs/bin/as: "/var/tmp/ccvfjcg_.s", line 17: error: location counter not on word boundary
+configure: failed program was:
+#line 3323 "configure"
+#include "confdefs.h"
+
+  int mfx_asm_func();
+  static void test() {
+    __asm__ __volatile__("
+    .globl mfx_asm_func
+    mfx_asm_func:
+      .byte 0
+    ");
+  }
+
+int main() {
+
+  return mfx_asm_func();
+
+; return 0; }
+configure:3364: checking whether the assembler understands .type
+configure:3372: gcc -c  -x assembler-with-cpp   conftest.s 1>&5
+/usr/ccs/bin/as: "/var/tmp/ccQgrE5_.s", line 45: error: invalid character (0x40)
+configure: failed program was:
+#line 3366 "configure"
+#include "confdefs.h"
+.type test,@function ; .globl test ; test:
+.byte 0
+.size test,.-test
+configure:3389: checking whether the assembler works
+configure:3397: gcc -c  -x assembler-with-cpp  -I./src/unknown/src conftest.s 1>&5
+configure:3393: lzo1x_f2.s: No such file or directory
+configure: failed program was:
+#line 3391 "configure"
+#include "confdefs.h"
+#define IN_CONFIGURE
+#include "lzo1x_f2.s"
+configure:3411: checking whether to build assembler versions

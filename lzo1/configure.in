@@ -1,0 +1,477 @@
+dnl Process this file with autoconf to produce a configure script.
+
+#
+#  configure.in -- autoconf configuration for the LZO library
+#
+#  This file is part of the LZO real-time data compression library.
+#
+#  Copyright (C) 1998 Markus Franz Xaver Johannes Oberhumer
+#  Copyright (C) 1997 Markus Franz Xaver Johannes Oberhumer
+#  Copyright (C) 1996 Markus Franz Xaver Johannes Oberhumer
+#
+#  The LZO library is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License as
+#  published by the Free Software Foundation; either version 2 of
+#  the License, or (at your option) any later version.
+#
+#  The LZO library is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with the LZO library; see the file COPYING.
+#  If not, write to the Free Software Foundation, Inc.,
+#  59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+#
+#  Markus F.X.J. Oberhumer
+#  markus.oberhumer@jk.uni-linz.ac.at
+#
+
+
+# /***********************************************************************
+# // Initialization
+# ************************************************************************/
+
+AC_INIT(src/lzo_util.c)
+AC_PREREQ(2.12)
+AC_CONFIG_AUX_DIR(acconfig)
+AC_PREFIX_DEFAULT(/usr/local)
+AM_INIT_AUTOMAKE(lzo,1.04)
+AM_CONFIG_HEADER(config.h:config.hin)
+AC_CANONICAL_HOST
+
+AM_MAINTAINER_MODE
+AM_CONDITIONAL(MAINTAINER, test x$USE_MAINTAINER_MODE = xyes)
+
+mfx_PROG_MAKE_GNU(mfx_GMAKE)
+AM_CONDITIONAL(GMAKE, test x$mfx_GMAKE = xyes)
+
+CLEANFILES='*.i'
+DISTCLEANFILES='*.bb *.bbg *.da *.gcov bb.out bbtrace* gmon.out'
+AC_SUBST(CLEANFILES)
+AC_SUBST(DISTCLEANFILES)
+
+mfx_enable_static="$enable_static"
+mfx_enable_shared="$enable_shared"
+AM_ENABLE_STATIC
+AM_ENABLE_SHARED
+
+dnl Allow the --disable-asm flag to stop us from building assembler functions.
+AC_ARG_ENABLE(asm,
+[  --enable-asm            try to build assembler versions [default=yes]],
+[test "$enableval" = no && enable_asm=no])
+test "$enable_asm" = no || enable_asm=yes
+
+AC_ARG_ENABLE(debug,
+[  --enable-debug          build a debug version [default=no]],
+[test "$enableval" = yes && enable_debug=yes])
+test "$enable_debug" = yes || enable_debug=no
+
+AC_ARG_ENABLE(profiling,
+[  --enable-profiling      build a profiling version [default=no]],
+[test "$enableval" = yes && enable_profiling=yes])
+test "$enable_profiling" = yes || enable_profiling=no
+
+AC_ARG_ENABLE(coverage,
+[  --enable-coverage       build a coverage version [default=no]],
+[test "$enableval" = yes && enable_coverage=yes])
+test "$enable_coverage" = yes || enable_coverage=no
+
+
+# /***********************************************************************
+# // Prepare compiler flags
+# ************************************************************************/
+
+dnl CC=""
+dnl LIBS=""
+dnl CFLAGS=""
+dnl CPPFLAGS=""
+dnl LDFLAGS=""
+dnl ASFLAGS=""
+
+CPPFLAGS="$CPPFLAGS"
+CFLAGS="$CFLAGS"
+CFLAGS_O=""
+CFLAGS_W=""
+AC_SUBST(CFLAGS_O)
+AC_SUBST(CFLAGS_W)
+AC_SUBST(ASFLAGS)
+AC_SUBST(LZO_CFLAGS)
+
+
+# /***********************************************************************
+# // Checks for compiler
+# ************************************************************************/
+
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_PROG_CPP
+AC_PROG_CC_C_O
+mfx_PROG_CC_INTEGRAL_PROMOTION
+mfx_PROG_CC_CHECKERGCC
+AM_EXEEXT
+
+dnl gcc -pipe makes troubles on some architectures (e.g. cygwin32)
+if test "$USE_MAINTAINER_MODE" = yes; then
+mfx_PROG_GCC_PIPE
+fi
+
+
+if test "$enable_debug" = yes; then
+  CPPFLAGS="$CPPFLAGS -DLZO_DEBUG"
+fi
+AC_MSG_CHECKING([whether to build a debug version])
+AC_MSG_RESULT($enable_debug)
+
+
+if test "$GCC" = yes; then
+  if test "$enable_profiling" = yes; then
+dnl    x="-pg -ax"
+    x="-pg"
+    LZO_CFLAGS="$LZO_CFLAGS $x"
+    LDFLAGS="$LDFLAGS $x"
+  fi
+else
+  enable_profiling=no
+fi
+AC_MSG_CHECKING([whether to build a profiling version])
+AC_MSG_RESULT($enable_profiling)
+
+
+if test "$GCC" = yes; then
+  if test "$enable_coverage" = yes; then
+    x="-fprofile-arcs -ftest-coverage"
+    LZO_CFLAGS="$LZO_CFLAGS $x -O0"
+  fi
+else
+  enable_coverage=no
+fi
+AC_MSG_CHECKING([whether to build a coverage version])
+AC_MSG_RESULT($enable_coverage)
+
+
+if test "$USE_MAINTAINER_MODE" = hugo; then
+AC_SUBST(ARCHFLAGS)
+if test "$GCC" = yes; then
+test -z "$ARCHFLAGS" && ARCHFLAGS="-mcpu=$host_cpu"
+AC_MSG_CHECKING([whether ${CC-cc} accepts $ARCHFLAGS])
+save_CFLAGS="$CFLAGS"
+CFLAGS="$CFLAGS $ARCHFLAGS"
+AC_TRY_COMPILE(,,
+  [ AC_MSG_RESULT(yes) ],
+  [ AC_MSG_RESULT(no)
+  ARCHFLAGS=""
+  CFLAGS="$save_CFLAGS"
+  case "$host_cpu" in
+    i[[56]]86)
+      ARCHFLAGS="-m486 -malign-loops=2 -malign-jumps=2 -malign-functions=2"
+      CFLAGS="$CFLAGS $ARCHFLAGS"
+    ;;
+  esac
+  ])
+fi
+fi
+
+
+# /***********************************************************************
+# // Initialize libtool
+# ************************************************************************/
+
+dnl maintainer defaults to --disable-shared
+if test "$USE_MAINTAINER_MODE" = yes; then
+  test -z "$mfx_enable_shared" && enable_shared=no
+fi
+
+AM_PROG_LIBTOOL
+
+if test "$USE_MAINTAINER_MODE" = yes; then
+  dnl configure libtool: use /bin/ash (it's quite a bit faster), be silent
+  if test -x /bin/ash; then
+    LIBTOOL='/bin/ash $(top_builddir)/libtool'
+  fi
+  LIBTOOL="$LIBTOOL --silent"
+fi
+
+
+liblzo='$(top_builddir)/src/liblzo.la'
+AC_SUBST(liblzo)
+
+
+# /***********************************************************************
+# // Checks for other programs
+# ************************************************************************/
+
+AM_PROG_INSTALL
+AC_CHECK_PROG(NASM,nasm,nasm)
+
+
+# /***********************************************************************
+# // Checks for libraries
+# ************************************************************************/
+
+### if test "$USE_MAINTAINER_MODE" = yes; then
+if test "$mfx_cv_prog_checkergcc" = no; then
+
+mfx_save_LIBS="$LIBS"
+AC_CHECK_LIB(z,zlibVersion)
+ltest_LIBS="$LIBS"
+LIBS="$mfx_save_LIBS"
+AC_SUBST(ltest_LIBS)
+
+fi
+### fi
+
+
+# /***********************************************************************
+# // Checks for system and library header files
+# ************************************************************************/
+
+AC_HEADER_STDC
+AC_HEADER_TIME
+AC_CHECK_HEADERS(assert.h ctype.h limits.h stddef.h time.h)
+AC_CHECK_HEADERS(malloc.h memory.h unistd.h)
+AC_CHECK_HEADERS(sys/param.h sys/resource.h sys/time.h sys/times.h)
+AC_CHECK_HEADERS(endian.h sys/endian.h unchecked.h)
+AC_CHECK_HEADERS(lzoconf.h zlib.h)
+
+if test "$ac_cv_header_limits_h" = no; then
+  AC_MSG_ERROR([<limits.h> header not found found])
+fi
+mfx_CHECK_HEADER_SANE_LIMITS_H
+if test "$mfx_cv_header_sane_limits_h" = no; then
+  AC_MSG_ERROR([your limits.h header is broken - for details see config.log])
+fi
+
+
+# /***********************************************************************
+# // Checks for typedefs and structures
+# ************************************************************************/
+
+AC_CHECK_TYPE(ptrdiff_t,long)
+AC_TYPE_SIZE_T
+
+dnl probably won't work when cross-compiling
+AC_CHECK_SIZEOF(unsigned short,0)
+AC_CHECK_SIZEOF(unsigned,0)
+AC_CHECK_SIZEOF(unsigned long,0)
+AC_CHECK_SIZEOF(char *,0)
+mfx_CHECK_SIZEOF(ptrdiff_t,0)
+mfx_CHECK_SIZEOF(size_t,0)
+
+
+# /***********************************************************************
+# // Checks for compiler characteristics
+# ************************************************************************/
+
+AC_C_CONST
+
+dnl not available when cross-compiling
+mfx_C_BYTE_ORDER
+
+
+# /***********************************************************************
+# // Checks for library functions
+# ************************************************************************/
+
+AC_CHECK_FUNCS(memcmp memcpy memmove memset)
+AC_CHECK_FUNCS(memicmp strcasecmp strncasecmp stricmp strnicmp)
+AC_CHECK_FUNCS(fstat getrusage gettimeofday stat times)
+mfx_FUNC_MEMCMP
+
+
+# /***********************************************************************
+# // Checks for system services
+# ************************************************************************/
+
+
+# /***********************************************************************
+# // Customization
+# ************************************************************************/
+
+mfx_CUSTOMIZE
+
+AC_SUBST(M_VPATH)
+M_VPATH=""
+if test "$GCC" = yes; then
+  if test "$M_ARCH" = "i386"; then
+    M_VPATH="/${M_ARCH}/src"
+    enable_asm=yes
+  fi
+fi
+
+if test "$mfx_unaligned_ok_2" = yes; then
+  AC_DEFINE(LZO_UNALIGNED_OK_2)
+fi
+if test "$mfx_unaligned_ok_4" = yes; then
+  AC_DEFINE(LZO_UNALIGNED_OK_4)
+fi
+
+dnl never activate this by default
+if test "1" = "2"; then
+  AC_DEFINE(LZO_ALIGNED_OK_4)
+fi
+
+
+# /***********************************************************************
+# // Checks for assembler support
+# ************************************************************************/
+
+if test "$GCC" = yes; then
+  ASFLAGS="$ASFLAGS -x assembler-with-cpp"
+fi
+
+mfx_asflags=""
+mfx_compile_s='${CC-cc} -c $ASFLAGS $CPPFLAGS $mfx_asflags conftest.s 1>&AC_FD_CC'
+
+
+AC_CACHE_CHECK(the alignment of the assembler, mfx_cv_asm_align,
+[AC_TRY_RUN([#include <stdio.h>
+int test() {
+#if defined(__GNUC__)
+  __asm__ __volatile__ ("
+  .align 4
+mfx_a1:
+  .byte 0
+  .align 4
+mfx_a2:
+  ");
+#endif
+  return 0;
+}
+main() {
+#if defined(__GNUC__)
+  extern char mfx_a1 __asm__("mfx_a1");
+  extern char mfx_a2 __asm__("mfx_a2");
+  long l = &mfx_a2 - &mfx_a1;
+  FILE *f = fopen("conftestval", "w");
+  if (!f) exit(1);
+  fprintf(f, "%ld\n", l);
+  exit(0);
+#else
+  exit(2);
+#endif
+}],
+mfx_cv_asm_align=`cat conftestval`,
+mfx_cv_asm_align="0",
+mfx_cv_asm_align="0")])
+if test "$mfx_cv_asm_align" = "16"; then
+  AC_DEFINE(MFX_ASM_ALIGN_PTWO)
+else
+  AC_DEFINE(MFX_ASM_ALIGN_BYTES)
+fi
+if test "$mfx_cv_asm_align" = "0"; then
+  enable_asm=no
+fi
+
+
+if test "$enable_asm" = yes; then
+AC_MSG_CHECKING([whether global symbols need underscores])
+AC_TRY_LINK([
+  int mfx_asm_func();
+  static void test() {
+    __asm__ __volatile__("
+    .globl mfx_asm_func
+    mfx_asm_func:
+      .byte 0
+    ");
+  }
+], [
+  return mfx_asm_func();
+], [
+  AC_DEFINE(MFX_ASM_NAME_NO_UNDERSCORES)
+  AC_MSG_RESULT(no)
+], [
+  AC_MSG_RESULT(yes)
+])
+fi
+
+
+if test "$enable_asm" = yes; then
+AC_MSG_CHECKING([whether the assembler understands .type])
+cat > conftest.s <<EOF
+[#]line __oline__ "configure"
+#include "confdefs.h"
+.type test,@function ; .globl test ; test:
+.byte 0
+.size test,.-test
+EOF
+if AC_TRY_EVAL(mfx_compile_s); then
+  AC_DEFINE(MFX_ASM_HAVE_TYPE)
+  AC_MSG_RESULT(yes)
+else
+  echo "configure: failed program was:" >&AC_FD_CC
+  cat conftest.s >&AC_FD_CC
+  AC_MSG_RESULT(no)
+fi
+rm -rf conftest*
+fi
+
+
+if test "$enable_asm" = yes; then
+AC_MSG_CHECKING([whether the assembler works])
+cat > conftest.s <<EOF
+[#]line __oline__ "configure"
+#include "confdefs.h"
+#define IN_CONFIGURE
+#include "lzo1x_f2.s"
+EOF
+mfx_asflags="-I$srcdir/src/$M_ARCH/src"
+if AC_TRY_EVAL(mfx_compile_s); then
+  :
+else
+  echo "configure: failed program was:" >&AC_FD_CC
+  cat conftest.s >&AC_FD_CC
+  enable_asm=no
+fi
+mfx_asflags=""
+rm -rf conftest*
+AC_MSG_RESULT($enable_asm)
+fi
+
+
+AC_MSG_CHECKING([whether to build assembler versions])
+AC_MSG_RESULT($enable_asm)
+
+
+AC_SUBST(LZO_ASM_OBJECTS)
+LZO_ASM_OBJECTS=""
+
+if test "$enable_asm" = yes; then
+  LZO_ASM_OBJECTS="\$(LZO_ASM_OBJECTS_${M_CC}_${M_ARCH})"
+else
+  AC_DEFINE(LZO_NO_ASM)
+fi
+
+
+mfx_asflags=""
+mfx_compile_s=""
+
+
+# /***********************************************************************
+# // Maintainer uses -Werror and lots of pedantic warnings.
+# // This is not enabled by default because it requires
+# // very clean system headers.
+# ************************************************************************/
+
+CFLAGS_W_PEDANTIC=""
+AC_SUBST(CFLAGS_W_PEDANTIC)
+if test "$USE_MAINTAINER_MODE" = yes; then
+  if test "$GCC" = yes; then
+    test "$enable_debug" = no && CFLAGS_W="$CFLAGS_W -Werror"
+    x=`grep -h '^-' b/gcc_lzo.opt`
+    x=`echo $x`
+    CFLAGS_W_PEDANTIC="-W -pedantic $x"
+  fi
+fi
+
+CPPFLAGS="$CPPFLAGS -DLZO_HAVE_CONFIG_H"
+test "$USE_MAINTAINER_MODE" = yes && CPPFLAGS="$CPPFLAGS -DMAINT"
+
+
+# /***********************************************************************
+# // Write output files
+# ************************************************************************/
+
+AC_OUTPUT(Makefile examples/Makefile include/Makefile ltest/Makefile minilzo/Makefile src/Makefile tests/Makefile)
+

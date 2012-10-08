@@ -1,0 +1,818 @@
+ls
+mkdir Thesis
+cd Downloads/
+ls
+mv * ../Thesis/
+ls
+cd ../Thesis/
+ls
+tar xvf adaptive-compression-cache.tgz 
+ls
+rm adaptive-compression-cache.tgz 
+ls
+tar xvf VMTrace-to-behavior-with-page-image.tgz 
+ls
+rm VMTrace-to-behavior-with-page-image.tgz 
+ls
+bunzip2 espresso-13-page-reduction.bz2 
+ls
+mv VMTrace-to-behavior-with-page-image/ VMTrace
+ls
+mv adaptive-compression-cache/ CompressedCacheUtility
+l
+mv VMTrace/ TraceReducUtiliy
+ls
+ls -al
+cd CompressedCacheUtility/
+ls
+vi input.h 
+vi general.h 
+ls
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+sudo apt-get g++
+gcc compadaptive.cpp 
+vi compadaptive.cpp 
+gcc -v compadaptive.cpp 
+clear
+gcc -v compadaptive.cpp 
+g++ compadaptive.cpp 
+sudo apt-get install g++
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+vi lruobj.h 
+vi general.h 
+g++ compadaptive.cpp 
+vi input.h 
+g++ compadaptive.cpp 
+vi lruobj.h 
+ls
+vi lruobj.h 
+g++ compadaptive.cpp 
+vi compinput.h 
+g++ compadaptive.cpp 
+vi compinput.h 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi general.h 
+g++ compadaptive.cpp 
+vi lruobj.h 
+g++ compadaptive.cpp 
+vi input.h 
+g++ compadaptive.cpp 
+vi general.h 
+g++ compadaptive.cpp 
+clear
+g++ compadaptive.cpp 
+vi lruobj.h 
+vi general.h 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+clear
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+clear
+g++ compadaptive.cpp 
+clear
+g++ compadaptive.cpp 
+vi compinput.h 
+vi compadaptive.cpp 
+vi compinput.h 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+ls
+vi input.h 
+vi compinput.h 
+g++ compinput.h 
+vi compinput.h
+g++ compinput.h 
+vi compinput.h
+g++ compinput.h 
+vi compinput.h
+g++ compinput.h 
+vi compinput.h
+g++ compinput.h 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+ls
+gcc ./a.out
+gcc a.out
+gcc ./a.out
+cd ..
+ls
+cd CompressedCacheUtility/
+gcc ./a.out ../espresso-13-page-reduction 
+./a.out
+a.out
+./a/out
+./a.out
+file a.out
+ls
+g++ compadaptive.cpp 
+ls
+a.out
+l
+./a.out
+l
+./a.out ../espresso-13-page-reduction 
+./a.out 512 512 4 4 4 4 4 4 4 4 4
+vi compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4
+vi compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+vi compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+vi compadaptive.cpp 
+vi compinput.h
+vi compadaptive.cpp 
+g++ compadaptive.cpp 
+vi compadaptive.cpp 
+ls
+./a.out 4 4 4 4 4 4 4 4 4 4 4 4 4
+ls
+cd ..
+ls
+cd TraceReducUtiliy/
+ls
+vi Makefile 
+ls
+MakeFile
+Makefile
+do Makefile
+run Makefile 
+ls
+clear
+ls
+gcc PageDumpFrame.
+gcc PageDumpFrame.cc 
+ls
+clear
+gcc PageDumpFrame.cc 
+vi PageDumpFrame.hh 
+vi PageDumpFrame.cc
+ls
+cd Thesis/
+ls
+ssh -Y msantolucito13@castor.cs.amherst.edu
+ssh -Y msantolucito13@rigel.amherst.edu
+ssh -Y msantolucito13@remus.amherst.edu
+ssh -Y msantolucito13@castor.cs.amherst.edu
+ssh -X castor.cs.amherst.edu
+ssh -Y msantolucito13@castor.cs.amherst.edu
+ls
+history
+ls
+cd Thesis/
+ls
+cd 1
+ls
+cd test-compression/
+ls
+make
+cd WK
+cd WKdm/
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+vi testit-linux.c 
+vi WKdm.c
+gcc -o testit testit-linux.c WKdm.c -lm
+ls
+./testit
+ls
+cd oldCompiledFiles/
+ls
+cd ..
+gcc -o testit testit-linux.c WKdm.c -lm
+gcc testit testit-linux.c WKdm.c -lm
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+vi testit-linux.c 
+vi WKdm.c
+cd ..
+make
+cd WKdm/
+ls
+mv testit testit2
+gcc -o testit testit-linux.c WKdm.c -lm
+ls
+./testit
+rm testit2
+ls
+gcc -o testit testit-linux.c WKdm WKdm.c -lm
+gcc -o WKdm.c -lm
+gcc -o WKdm WKdm.c -lm
+ls
+pushd .
+cd ../../..
+ls
+cd ..
+cd Thesis/
+cd 1
+ls
+cd orig/
+ls
+cd test-compression/
+ls
+cd WKdm/
+ls
+cp WKdm.c ../../../../1/test-compression/WKdm
+popd
+ls
+gcc -o WKdm WKdm.c -lm
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+ls
+gcc -o WKdm WKdm.c -lm
+vi WKdm.c
+gcc -o testit testit-linux.c WKdm.c -lm
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+gcc -o WKdm WKdm.c -lm
+gcc WKdm.c
+gcc WKdm.c -l
+gcc WKdm.c -lm
+cd ..
+make
+cd WKdm/
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+./testit 
+ssh -Y msantolucito13@castor.cs.amherst.edu
+gcc -o testit testit-linux.c WKdm.c -lm
+ll
+vi WKdm.c
+gcc -o testit testit-linux.c WKdm.c -lm
+vi WKdm.c
+gcc -o testit testit-linux.c WKdm.c -lm
+lll
+ll
+gcc -o WKdm WKdm.c -lm
+ls
+gcc -o WKdm WKdm.c -lm -c
+ll
+./testit 
+WKdm
+./WKdm
+rm WKdm
+ls
+gcc -o WKdm WKdm.c -lm
+ls
+c d..
+cd ..
+make
+cd WKdm/
+ls
+gcc WKdm.c
+gcc WKdm.c -lm
+gcc WKdm.c -lm -c
+ls
+cd ..
+make
+cd WKdm/
+rm WKdm.o
+ls
+./testit
+cd ../../..
+ls
+cd 1
+cd orig/
+ls
+cd test-compression/
+cd WKdm
+ls
+ll
+cd ..
+mkdir WKdmCheck
+cp -r WKdm WKdmCheck/
+cd WKdmCheck/
+ls
+cd WKdm/
+ls
+rm *.o
+ls
+gcc -o testit testit-linux.c WKdm.c -lm
+./testit
+cd ../../../..
+ls
+cd test-compression/
+ls
+cd WKdm
+ls
+cd ..
+cd test-compression/
+ls
+cd WK2
+ls
+mkdir old
+mv *.o old/
+ls
+mv *.o* old/
+ls
+vi README 
+gcc -o testit testit.c WK2.c -lm
+./testit 
+cd ..
+ls
+ccd lzrw1/
+cd lzrw1/
+ls
+mkdir old
+mv *.o* old
+ls
+gcc -o testit testit.c lzrw1.c -lm
+./testit 
+ll
+cd old/
+ls
+cd .
+gcc -o lzrw1.o  lzrw1.c -lm
+gcc -o lzrw1.o  lzrw1.c -c
+ls
+./testit 
+./testit 16
+cd ..
+ls
+cd lzo/
+lss
+ls
+cd ..
+ls
+mv lzo lzo1
+mkdir lzo
+cd lzo
+wget http://www.oberhumer.com/opensource/lzo/download/LZO-v1/lzo-1.08.tar.gz
+ls
+gunzip lzo-1.08.tar.gz 
+tar -xvfz lzo-1.08.tar 
+tar -xvf lzo-1.08.tar 
+ls
+mv -r lzo-1.08/* .
+mv lzo-1.08/* .
+ls
+rm lzo-1.08
+cd lzo-1.08
+ls
+cd ..
+rmdir lzo-1.08
+ls
+vi INSTALL 
+./configure 
+make
+make check
+make test
+vi INSTALL 
+sudo make install
+ls
+cd ..
+ls
+cd lzrw1/
+ls
+./testit
+cd ..
+ks
+cd lzrw1/
+pushd .
+cd ..
+cd WKdm/
+ls
+./testit 
+ls
+gcc -o WKdm.o WKdm.c
+gcc -o WKdm.o WKdm.c -lm
+clear
+./testit 
+ls
+cd ..
+ls
+make
+cd WK
+cd WK2/
+ls
+./testit
+cd ..
+ls
+cd lzrw1/
+ls
+./testit
+ls
+histroy
+history
+:x
+ls
+rm lzrw1.o
+gcc -o lzrw1.o lzrw1.c -lm
+clear
+cd ..
+ls
+cd WKdm/
+./testit
+cd ..
+cd lzrw1/
+./testit
+less testit.c 
+cd ..
+ls
+cd WKdm/
+ls
+gcc -o2 -march=native -c WKdm.c
+ls
+rm 2
+gcc -02 -march=native -c WKdm.c lm
+gcc -o WKdm.o -02 -march=native -c WKdm.c -lm
+gcc -o WKdm.o -o2 -march=native -c WKdm.c -lm
+ls
+mv 2 WKdm.o
+ls
+cd ..
+make
+cd WK2
+ls
+gcc -o WK2.o -march=native -c WK2.c -lm -o2
+ls
+mv 2 WK2.o
+cd ..
+mak
+make
+cd lzrw1/
+ls
+gcc -o lzrw1.o -march=native -c lzrw1.c -lm
+ls
+cd ..
+make
+clear
+make
+vi Makefile 
+popd
+cd ../../..
+ls
+cd 1
+ls
+cd orig/
+cd ..
+ls
+cd ..
+cd 1
+cd orig/
+ls
+cd test-compression/
+vi Makefile 
+emacs Makefile &
+cd ../..
+ls
+cd test-compression/
+emacs Makefile &
+ls
+ccd WKdm
+cd WKdm/
+ls
+rm WKdm.o
+gcc -o WKdm.o -O2 -march=native -c WKdm.c -lm
+ls
+cd ..
+cd WK2
+lss
+ls
+rm WK2.o 
+gcc -o WK2.o -O2 -march=native -c WK2.c -lm
+ls
+cd ..
+cd lzrw1/
+ls
+rm *.o
+ls
+gcc -o lzrw1.o -O2 -march=native -c lzrw1.c -lm
+ls
+cd ..
+ls
+make
+vi safezlib.cc 
+make
+cd ../..
+ls
+cd ..
+cd Thesis/
+zip 1
+zip 1 1.zip
+zip 1.zip 1
+ls
+rm 1.zip 
+gzip 1
+tar 1
+man tar
+tar -c 1
+reset
+cd Thesis/
+ls
+cd 1
+ls
+cd test-compression/
+ls
+make
+vi safezlib.cc 
+make
+clear
+ls
+./test-compression 
+cd ..
+ls
+ccd ..
+cd ..
+ls
+mv espresso-13-page-reduction 1/test-compression/
+ls
+cd 1
+ls
+cd test-compression/
+ls
+./test-compression espresso-13-page-reduction 1024 no 2000000 8
+vi safezlib.cc 
+ll
+ls
+more safezlib.
+more safezlib.cc 
+ls
+./test-compression 
+vi test-compression.cc 
+cd
+ls
+cd Downloads/
+ls
+cd ..
+ls
+cd T
+ls
+cd Thesis/
+ls
+cd 1
+ls
+cd test-compression/
+ls
+rm espresso-13-page-reduction 
+ll
+ping
+ping amherst.edu
+ls
+./test-compression 
+wget http://www.cs.amherst.edu/~sfkaplan/downloads/page-image-traces/espresso-13-page-reduction.bz2
+./test-compression espresso-13-page-reduction.bz2 1024 no 2000000 8
+vi safezlib.cc 
+vi test-compression.cc 
+fgrep Invalid\ compulsory\ field *.cc
+vi TraceRecord.cc
+ls
+cp espresso-13-page-reduction.bz2 
+cp espresso-13-page-reduction.bz2 espresso-13-page-reduction-readable.bz2 
+bunzip2 espresso-13-page-reduction-readable.bz2 
+ls
+vo WKdm.results 
+vi WKdm.results 
+hexedit WKdm.results 
+./test-compression espresso-13-page-reduction.bz2 1024 no 2000000 8
+ll
+pushd .
+cd ../..
+ls
+cd 1
+cd orig/
+ls
+cd test-compression/
+ls
+cp vmtrace.filtered2.gz ../../test-compression/vmtrace.filtered2.gz 
+popd
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+./test-compression vmtrace.filtere 1024 no 2000000 8
+./test-compression vmtrace.filtered 1024 no 2000000 8
+ll
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+fgrep Invalid/ dirty *.cc
+fgrep Invalid\ dirty *.cc
+vi TraceRecord.cc 
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+./test-compression vmtrace.filtered2.gz 1024 yes 2000000 8
+vi vmtrace.filtered
+hexedit vmtrace.filtered
+vi TraceRecord.cc 
+mak
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+vi TraceRecord.
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+vi vmtrace.filtered
+hexedit vmtrace.filtered
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+vi TraceRecord.cc 
+make
+hexedit vmtrace.filtered
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+emacs test &
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+hexedit vmtrace.filtered
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+hexedit vmtrace.filtered
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+vi TraceRecord.cc 
+vi safezlib.cc 
+vi TraceRecord.cc 
+make
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+peek 0x8b8c240
+vi TraceRecord.cc 
+make
+vi TraceRecord.cc 
+make
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+hexedit vmtrace.filtered
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+./test-compression
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 16
+./test-compression vmtrace.filtered2.gz 512 no 2000000 16
+./test-compression vmtrace.filtered2.gz 1000 no 2000000 16
+./test-compression vmtrace.filtered2.gz 511 no 2000000 16
+./test-compression vmtrace.filtered2.gz 510 no 2000000 16
+./test-compression vmtrace.filtered2.gz 1024 no 2000000 8
+hexedit vmtrace.filtered
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+ls
+vi WKdm.results
+hexedit WKdm.results 
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+vi TraceRecord.cc 
+make
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+clear
+ll
+vi WK2.results 
+ll | grep result
+vi LZO.results 
+hexedit LZO.results 
+ls
+clear
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+ls
+vi test-compression.cc 
+fgrep check\point *.cc
+fgrep check\ point *.cc
+vi TraceRecord.cc 
+ls
+vi LZRW1.results 
+ls
+vi LZRW1.results 
+vi test-compression.cc 
+make
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+vi test-compression.cc 
+vi TraceRecord.
+vi TraceRecord.cc 
+bunzip espresso-13-page-reduction.bz2 
+bunzip2 espresso-13-page-reduction.bz2 
+ls
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+vi WK2.results 
+vi WK2Tester.cc 
+less CompressionAlgorithmTester.cc
+gunzip < WK2.results
+gunzip < WK2.results | less
+l
+vi CompressionAlgorithmTester.cc 
+vi WK2Tester.cc 
+./WK2Tester.o
+cd WK2
+ls
+testit
+./testit
+:q
+cd ..
+ls
+gunzip < WK2.results | less
+vi CompressionAlgorithmTester.cc 
+gunzip< WK2.results
+gunzip < WK2.results | less
+vi test-compression.cc 
+cd WK2
+ls
+./testit
+s
+ls
+vi WK2.c
+README less
+less README
+cd ..
+ls
+less test-compression.cc
+fgrep "test(" *.cc
+fgrep "test(" *.*.cc
+cd WK@
+cd WK2
+fgrep "test(" *.cc
+cd ..
+fgrep "test(" *.hh
+fgrep "test" *.cc
+less CompressionAlgorithmTester.cc
+less WK2.results
+gunzip < WK2.results | less
+less CompressionAlgorithmTester.cc
+gunzip < WK2.results | less
+gunzip < LZO.results | less
+ls
+gunzip < LZRW1.results | less
+gunzip < WKdm.results | less
+cd WK2
+./testit
+cd ..
+cd LZO
+ls
+cd lzo
+./testit
+ls
+cd ..
+cd WKdm
+./testit
+cd ..
+ls
+gunzip < vmtrace.filtered2.gz | less
+gunzip < WK2.results | less
+gunzip < vmtrace.filtered2.gz | less
+gunzip < WK2.results | less
+ls -al
+gzip --list vmtrace.filtered2.gz 
+ls -lh espresso-13-page-reduction 
+ls
+lsl
+vi ZenTimer.hh 
+vi CompressionAlgorithmTester.cc 
+vi LZOTester.cc 
+fgrep * START_TIMER
+fgrep *.cc START_TIMER
+fgrep START_TIMER *.cc
+vi LZOTester.cc 
+vi CompressionAlgorithmTester.cc 
+vi test-compression.cc 
+history
+gunzip < WK2.results | less
+ls
+fgrep START_TIMER *.cc
+vi LZOTester.cc 
+make
+vi Makefile
+make
+history
+./test-compression vmtrace.filtered2.gz 4096 no 2000000 8
+gunzip < WK2.results | less
+gunzip < LZO.results | less
+history -w history.txt

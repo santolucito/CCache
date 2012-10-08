@@ -1,0 +1,10 @@
+@set ASFLAGS=
+@set CC=
+@set _CC=
+@set CFLAGS=
+@set CPPLAGS=
+@set DEFS=
+@set EXTRA_CFLAGS=
+@set LDFLAGS=
+@set LIBS=
+@set MYLIB=
