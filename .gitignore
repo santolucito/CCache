@@ -1,0 +1,11 @@
+# traces #
+*.gz
+
+# compression algorithms #
+lzo/*
+WKdm/*
+WK2/*
+lzrw1/*
+
+# object files #
+*.o
