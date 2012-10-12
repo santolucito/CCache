@@ -1,0 +1,70 @@
+WK2-v0.2
+
+Since the dictionary updates are applied by literally re-ordering
+elements within each set by copying values, we reduce the cost of that
+re-ordering by storing only the full pattern.  (Previously, both full
+and partial patterns were stored.)
+
+We also re-introduce the measurement procedure so that this version
+can be used with the compression testing code and the page-dump
+traces.
+
+One final and unexpected change provided a surprising speed
+improvement:  The DictionaryElement structure was changed to a type
+definition, as the structure contained only one element after the
+high-bits pattern member was eliminated.  (The Dictionary structure
+was also eliminated, as it too contained only one member,
+specifically the array of dictionary elements.  However, this
+particular removal did not result in a speed increase.)  I am unsure
+of the reason for the speedup, but it is non-trivial.
+=====
+WK2-v0.1
+
+We skip the modifications made in WK1 to apply orthogonal changes from
+WK0.  In particular, the dictionary is no longer a linked list of
+LRU-ordered word patterns, but rather a 4x4 set associative cache.
+Each set is maintained in LRU order, although by literal movement of
+patterns in the set rather than through a linked list.
+
+Note that we change the use of the fourth available tag value.
+Previously, it was used to indicate an exact hit in the first queue
+position.  However, now there are four sets, each with its own first
+queue position.  In order to simplify the changes, the extra tag will
+be used to indicate a pattern of all zeros.
+
+=====
+WK0-v0.2
+
+This version contains a small improvement on the previous one--the
+dictionary position is encoded as an array index.  Thus, in the
+decoding phase, an LRU-ordered traversal of the dictionary in no
+longer necessary, and the needed dictionary item can be immediately
+accessed.
+
+=====
+WK0-v0.1
+
+This first version of WK0 is a reasonably straightforward
+implementation of a recency-based compression scheme that operates on
+machine-word sized tokens.  Here are some key pieces of information
+that are likely to help in comparing this version of the algorithm
+with later versions:
+
+- 16 element dictionary that stores both full and partial patterns.
+- Partial matching is based on the top 22 bits of a 32 bit word.
+- Partial matches are attempted first, then exact if the partial
+succeeds.
+- Encoding is performed by adding tag bits, dictionary position (if
+needed), and literal bits (if needed) to the compressed stream one at
+a time.  (Compression can actually be done in one encoding step, as
+the requisite knowledge is available at encoding time.  For
+decompression, however, the compressed stream must be parsed one item
+at a time, making decoding slow.)
+- Dictionary position numbers are encoded as LRU-ordered indices.
+That means that upon decoding, the dictionary must be traversed in LRU
+order.
+
+There may be more needed information, but it depends on what changes
+are made later.  Note that each new version will have its own README
+with updates to this information.
+=====
