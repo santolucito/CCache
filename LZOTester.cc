@@ -34,14 +34,15 @@ LZOTester::performCompressionTest
 
   // Surround a call to the compression routine with a timing
   // mechanism.
-  //START_TIMER;
+  //START_MYTIMER;
 
-  //this is an attempt to replace the timer
+  //start
   struct timespec start, stop;
   long accum;
 
   clock_gettime(CLOCK_REALTIME, &start);
- 
+  //endstart
+
   resultCode =
     lzo1f_1_compress((lzo_byte*)uncompressedData,
 		     uncompressedBytes,
@@ -49,16 +50,18 @@ LZOTester::performCompressionTest
 		     &compressedSize,
 		     workingMemory);
 
+  //stop
   clock_gettime(CLOCK_REALTIME, &stop);
 
   accum = (stop.tv_sec - start.tv_sec)
-        + (stop.tv_nsec - start.tv_nsec)
-        / 1000000000L;
+        + (stop.tv_nsec - start.tv_nsec);
+        /// 1000000000.0;
 
   returnCompressionTime = accum;
 
+  //endstop  
 
-  //STOP_TIMER(returnCompressionTime);
+  //STOP_MYTIMER;
 
   // Ensure that the compression was successful.
   if (resultCode != LZO_E_OK) {
@@ -115,11 +118,31 @@ LZOTester::performDecompressionTest
   // Surround a call to the decompression routine with a timing
   // mechanism.
   //START_TIMER;
+
+//start
+  struct timespec start, stop;
+  long accum;
+
+  clock_gettime(CLOCK_REALTIME, &start);
+  //endstart
+
   resultCode = lzo1f_decompress(compressionBuffer,
 				compressedSize,
 				decompressionBuffer,
 				&decompressedSize,
 				0);
+
+  //stop
+  clock_gettime(CLOCK_REALTIME, &stop);
+
+  accum = (stop.tv_sec - start.tv_sec)
+        + (stop.tv_nsec - start.tv_nsec);
+        /// 1000000000.0;
+
+  returnDecompressionTime = accum;
+
+  //endstop 
+
  // STOP_TIMER(returnDecompressionTime);
 
   // Ensure that the decompression was successful.

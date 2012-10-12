@@ -32,10 +32,30 @@ WK2Tester::performCompressionTest
   // Surround a call to the compression routine with a timing
   // mechanism.
   //START_TIMER;
+
+  //this is an attempt to replace the timer
+  //start
+  struct timespec start, stop;
+  long accum;
+
+  clock_gettime(CLOCK_REALTIME, &start);
+  //endstart
+
+
   returnCompressedSize =
     WK2_compress((WK_word*)uncompressedData,
 		 compressionBuffer,
 		 uncompressedBytes / bytesPerWord);
+
+  //stop
+  clock_gettime(CLOCK_REALTIME, &stop);
+
+  accum = (stop.tv_sec - start.tv_sec)
+        + (stop.tv_nsec - start.tv_nsec);
+        /// 1000000000L;
+
+  returnCompressionTime = accum;
+  //endstop
   //STOP_TIMER(returnCompressionTime);
 
 }
@@ -64,9 +84,27 @@ WK2Tester::performDecompressionTest
   // Surround a call to the decompression routine with a timing
   // mechanism.
   //START_TIMER;
+
+//start
+  struct timespec start, stop;
+  long accum;
+
+  clock_gettime(CLOCK_REALTIME, &start);
+  //endstart
   WK2_decompress(compressionBuffer,
 		 decompressionBuffer,
 		 uncompressedWords);
+
+  //stop
+  clock_gettime(CLOCK_REALTIME, &stop);
+
+  accum = (stop.tv_sec - start.tv_sec)
+        + (stop.tv_nsec - start.tv_nsec);
+        /// 1000000000.0;
+
+  returnDecompressionTime = accum;
+
+  //endstop 
   //STOP_TIMER(returnDecompressionTime);
 
 }
