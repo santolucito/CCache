@@ -1,6 +1,7 @@
 # traces #
 *.gz
 *.raw
+fullTraces/*
 
 # compression algorithms #
 #lzo/*
