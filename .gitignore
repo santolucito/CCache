@@ -10,7 +10,7 @@ fullTraces/*
 #lzrw1/*
 
 # object files #
-*.o
+#*.o
 
 
 
