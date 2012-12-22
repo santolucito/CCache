@@ -1,5 +1,6 @@
 CC = g++
-CFLAGS = -g -O2
+CFLAGS = -g -O2 -m32
+VPATH = home/msantolucito13/libs
 INCLUDEFLAGS = -I ./lzo/include/ -I ./WKdm/ -I ./WK2/ -I ./lzrw1/
 LDFLAGS = -llzo -lz -lm -lrt
 LDPATH = -L ./lzo/

@@ -100,12 +100,10 @@ processTrace (gzFile inputFile,
     records[recordNumber] = new TraceRecord(tracePageSize);
 
   }
-
   // Read through the entire trace, and let each algorithm compress
   // and decompress each evicted and fetched page.
   bool done = false;
   while (!done) {
-
     // Read as many records as requested (or as many as are left in
     // the trace).
     unsigned int recordsRead = 0;
@@ -140,21 +138,19 @@ processTrace (gzFile inputFile,
       for (unsigned int recordsTimed = 0;
 	   recordsTimed < recordsRead;
 	   recordsTimed++) {
-
-	// Test the compression and decompression and output the
+	
+        // Test the compression and decompression and output the
 	// results.
 	(*testerIterator)->test(records[recordsTimed],
 				tracePageSize);
-
       } // Records-at-a-time loop
     } // CompressionAlgorithmTester loop
   } // Trace reading loop
 
-
   // Clean up the vector of testers.
   cleanTesterVector(testerVector);
 
-
+  cout<<"check1";
   // Deallocate the trace records.
   for (unsigned int recordNumber = 0;
        recordNumber < recordsAtATime;
@@ -196,16 +192,16 @@ main (int argc, char** argv) {
   // that, at 8K per record, should be a large enough chunk of data to
   // prevent the cache from artificially improving results.
   unsigned int recordsAtATime = cacheSize;
-
+  
   // Open the input and output files.
   gzFile inputFile = safegzopen(inputPathname, "r");
-
+  
   // Initiate the trace processing loop.
   processTrace(inputFile,
 	       tracePageSize,
 	       fixEndianness,
 	       recordsAtATime);
-
+  
   // Close the input file.
   gzclose(inputFile);
   cout << "\nshit actually got to the end!";

@@ -91,10 +91,12 @@ WK2Tester::performDecompressionTest
 
   clock_gettime(CLOCK_REALTIME, &start);
   //endstart
+cout<<"start test";
   WK2_decompress(compressionBuffer,
 		 decompressionBuffer,
 		 uncompressedWords);
 
+cout<<"tested";
   //stop
   clock_gettime(CLOCK_REALTIME, &stop);
 
