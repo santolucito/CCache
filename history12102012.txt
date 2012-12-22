@@ -1,0 +1,907 @@
+    1  ls
+    2  logout
+    3  logout
+    4  ls
+    5  cd cluster-scratch/
+    6  ls
+    7  ls -al
+    8  cd ..
+    9  ls
+   10  mkdir Thesis
+   11  cd Thesis/
+   12  ls
+   13  git man
+   14  git --help
+   15  git config --help
+   16  git config --list
+   17  git log
+   18  git config user.name "Mark Santolucito"
+   19  cd ..
+   20  mkdir .git
+   21  cd .git
+   22  touch config
+   23  cd ..
+   24  cd Thesis/
+   25  git config user.name "Mark Santolucito"
+   26  mkdir .git
+   27  cd .git
+   28  touch config
+   29  cd ..
+   30  git config user.name "Mark Santolucito"
+   31  cd ..
+   32  ls
+   33  ls -al
+   34  rm -r .git
+   35  ls
+   36  ls -l
+   37  ls -a
+   38  cd Thesis/
+   39  ls
+   40  ls
+   41  ls -a
+   42  git config user.email "msantolucito13@amherst.edu"
+   43  git config credential.helper cache
+   44  git config credential.helper 'cache --timeout=3600'
+   45  ls
+   46  cd Thesis/
+   47  ls
+   48  ls
+   49  cd Thesis/
+   50  ls
+   51  ls
+   52  ls
+   53  git clone git://github.com/santolucito/CCache
+   54  ls
+   55  cd CCache/
+   56  ls
+   57  make clean
+   58  make
+   59  ls
+   60  make
+   61  cd ..
+   62  ls
+   63  cd ..
+   64  ls
+   65  cd ..
+   66  ls
+   67  cd bhutz/
+   68  ls
+   69  cd ..
+   70  ls
+   71  cd dang15/
+   72  ls
+   73  cd ..
+   74  cd ako13/
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd bhutz/
+   79  ls
+   80  cd ..
+   81  ls
+   82  cd msantolucito13/
+   83  ls
+   84  cd Thesis/
+   85  ls
+   86  cd CCache/
+   87  l
+   88  ls
+   89  cd WKdm
+   90  ls
+   91  gcc -o2 -c -march=native WKdm.c -lm
+   92  gcc -o2 -c -march='native' WKdm.c -lm
+   93  gcc -o2 -c WKdm.c -lm
+   94  gcc -o2 -c WKdm.c
+   95  ls
+   96  gcc -o2 -c -march=native WKdm.c -lm
+   97  gcc -o2 -c -march=native WKdm.c -lm -v
+   98  ls
+   99  cd Thesis/
+  100  ls
+  101  cd C
+  102  cd CCache/
+  103  ls
+  104  cd Wkdm
+  105  cd WKdm
+  106  ls
+  107  gcc -o2 -c -march=native WKdm.c -lm
+  108  gcc -o2 -c -mtune=native WKdm.c -lm
+  109  gcc -o2 -c  WKdm.c -lm
+  110  gcc -o2 -c -mtune=native WKdm.c -lm -v
+  111  gcc -o2 -mtune=native WKdm.c -lm -v
+  112  gcc -o2 -mtune=native WKdm.c -lm
+  113  gcc -o2 WKdm.c -lm
+  114  gcc -o2 WKdm.c -lmc
+  115  gcc -o2 WKdm.c -lm -c
+  116  gcc -o2 -c WKdm.c -lm
+  117  gcc -o2 -lm -c WKdm.c
+  118  gcc -o2 -c WKdm.c
+  119  vi WKdm.c
+  120  gcc -o2 -c WKdm.c
+  121  vi WKdm.c
+  122  gcc -o2 -c WKdm.c
+  123  ls
+  124  gcc -o2 -c WKdm.c -lm
+  125  gcc -o2 -mtune=native WKdm.c -lm
+  126  gcc -o2 -c WKdm.c -lm
+  127  ls
+  128  make
+  129  gcc -o2 WKdm.c
+  130  gcc -o2 WKdm.c -lm
+  131  gcc -o2 WKdm.c -lm
+  132  gcc -o2 -c WKdm.c -lm
+  133  gcc -o2 -c WKdm.c 
+  134  ls
+  135  2
+  136  vi 2
+  137  rm 2
+  138  gcc -o2 -c WKdm.c 
+  139  ls
+  140  mv 2 Wkdm.o
+  141  cd ..
+  142  make
+  143  cd WKdm
+  144  ls
+  145  mv Wkdm.o WKdm.o
+  146  cd ..
+  147  make
+  148  cd WK2
+  149  ls
+  150  gcc -o2 -c WK2.c 
+  151  vi README 
+  152  ls
+  153  mv 2 WK2.
+  154  ls
+  155  cd ..
+  156  l
+  157  ls
+  158  cd lzrw1/
+  159  ls
+  160  gcc -o2 -c lzrw1.c 
+  161  ls
+  162  mv 2  lzrw1.o
+  163  cd ..
+  164  make
+  165  cd lzo
+  166  ls
+  167  vi INSTALL 
+  168  ./configure
+  169  make
+  170  vi INSTALL 
+  171  make check
+  172  vi INSTALL 
+  173  make test
+  174  vi INSTALL 
+  175  make install
+  176  vi INSTALL 
+  177  sudo make install
+  178  cd ..
+  179  make
+  180  make
+  181  man librt
+  182  ls
+  183  cd Thesis/
+  184  ls
+  185  mkdir Writing
+  186  cd Writing/
+  187  ls
+  188  emacs Thesis.tex
+  189  gedit Thesis.tex
+  190  ls
+  191  mv references.bib\' references.bib
+  192  ls
+  193  latex Thesis.tex 
+  194  ls
+  195  jobs
+  196  wget https://www.sharelatex.com/project/507ae607e8b052ee560ef300/file/507af850e8b052ee5610ad60
+  197  ls
+  198  cd login 
+  199  open login 
+  200  mv login.png
+  201  mv login login.png
+  202  open login.png 
+  203  rm login.png 
+  204  ls
+  205  cd ../..
+  206  ls
+  207  cd ..
+  208  cd ..
+  209  ls
+  210  cd
+  211  ls
+  212  cd Thesis/
+  213  ls
+  214  cd Writing/
+  215  ls
+  216  rm references.bib 
+  217  rm Thesis.aux 
+  218  rm Thesis.
+  219  rm Thesis.dvi 
+  220  rm Thesis.log 
+  221  rm Thesis.tex 
+  222  ls
+  223  unzip Thesis.zip 
+  224  ls
+  225  rm Thesis.zip 
+  226  ls
+  227  latex main.tex 
+  228  ls
+  229  xvid main.dvi &
+  230  jobs
+  231  xdvi main.dvi &
+  232  dvipdfm Thesis.pdf
+  233  dvipdfm main.dvi Thesis.pdf
+  234  ls
+  235  dvipdfm main.dvi Thesis.pdf
+  236  ls
+  237  dvipdfm main.dvi
+  238  ls
+  239  evince main.pdf 
+  240  vi main.tex 
+  241  latex main.tex 
+  242  cp references.bib main.bbl
+  243  ls
+  244  latex main.tex 
+  245  dvipdfm main.dvi 
+  246  ls
+  247  evince main.pdf 
+  248  vi main.tex 
+  249  latex main.tex 
+  250  vi main.log 
+  251  pdflatex main.tex 
+  252  ls
+  253  evince main.pdf 
+  254  vi main.tex 
+  255  logout
+  256  ls
+  257  cd Thesis/
+  258  ls
+  259  cd CCache/
+  260  ls
+  261  make
+  262  ls
+  263  cd Thesis/
+  264  ls
+  265  cd CCache/
+  266  ls
+  267  ls -al
+  268  clear
+  269  ls
+  270  make
+  271  vi WKdm/WKdm.o
+  272  vi WKdm/WKdm.c
+  273  ls
+  274  cd WKdm
+  275  ls
+  276  ./testit 
+  277  gcc -o2 -c WKdm.c -lm
+  278  gcc -o2 -c WKdm.c
+  279  ./testit 
+  280  cd ..
+  281  make
+  282  ls
+  283  cd WKdmm
+  284  cd WKdm
+  285  ls
+  286  ./2
+  287  ls -al
+  288  chmod 2 ug+x
+  289  chmod ug+x 2
+  290  ls -al
+  291  ./2
+  292  chmod ug-x 2
+  293  gcc -o2 -c WKdm.c
+  294  ls
+  295  rm 2
+  296  gcc -o2 -c WKdm.c
+  297  s
+  298  ls
+  299  make
+  300  mv 2 WKdm.o
+  301  cd ..
+  302  make
+  303  cd WKdm
+  304  vi WKdm.c
+  305  vi WKdm.c
+  306  make
+  307  cd ..
+  308  make
+  309  logout
+  310  ls
+  311  cd Thesis/
+  312  ls
+  313  cd CCache/
+  314  make
+  315  ls
+  316  cd WKdm
+  317  ls
+  318  ./testit 
+  319  cd ..
+  320  ls
+  321  make
+  322  collect2: ld returned 1 exit status
+  323  cd WKdm
+  324  ls
+  325  vi WKdm.c
+  326  gcc -o2 -c WKdm.c
+  327  ls
+  328  mv 2 WKdm.o
+  329  ls
+  330  cd ..
+  331  ls
+  332  make
+  333  cd WKdm
+  334  ls
+  335  cd WKdm.c
+  336  vi WKdm.c
+  337  gcc -o2 -c WKdm.c
+  338  gcc -o2 -c WKdm.c -lm
+  339  ls
+  340  mv 2 WKdm.o
+  341  cd ..
+  342  make
+  343  cd WKdm
+  344  ls
+  345  gcc -o2 -c -march=native WKdm.c -lm
+  346  gcc -o2 -c WKdm.c -lm
+  347  ls
+  348  cd ..
+  349  ls
+  350  vi history.txt 
+  351  cd WKdm
+  352  gcc testit testit-linux.c WKdm.c -lm
+  353  vi ../history.txt 
+  354  gcc -o testit testit-linux.c WKdm.c -lm
+  355  vi ../history.txt 
+  356  clear
+  357  vi ../history.txt 
+  358  gcc -o WKdm.o WKdm.c
+  359  vi ../history.txt 
+  360  gcc -o WKdm.o -c WKdm.c lm -o2
+  361  gcc -o WKdm.o -c WKdm.c -lm -o2
+  362  vi ../history.txt 
+  363  gcc -o WKdm.o -c WKdm.c -lm -02
+  364  gcc -o WKdm.o -c WKdm.c -lm -O2
+  365  vi ../history.txt 
+  366  gcc -o WKdm.o -c WKdm.c -lm -o2
+  367  ls
+  368  mv 2 WKdm.o
+  369  cd ..
+  370  make
+  371  vi ../history.txt 
+  372  cd WKdm
+  373  vi ../history.txt 
+  374  cd ..
+  375  make clean
+  376  make
+  377  cd WKdm
+  378  vi WKdm.c
+  379  cd ..
+  380  make
+  381  cd ..
+  382  gcc -o WKdm.o -c WKdm.c -lm -o2
+  383  gcc -o2 -c WKdm.c -lm
+  384  cd CCache/
+  385  cd WKdm
+  386  gcc -o2 -c WKdm.c -lm
+  387  gcc -o2 -c WKdm.c
+  388  ls
+  389  mv 2 WKdm.o
+  390  cd ,,
+  391  cd ..
+  392  make
+  393  vi history.txt 
+  394  ls
+  395  vi history.txt 
+  396  rm vmtrace.filtered 
+  397  wget www.cs.amherst.edu/~sfkaplan/downloads/page-image-traces/espresso-13-page-reduction.bz2
+  398  ls
+  399  ls -al
+  400  bunzip2 espresso-13-page-reduction.bz2 
+  401  bunzip2 espresso-13-page-reduction.bz2 -v
+  402  man bunzip2
+  403  wget www.cs.amherst.edu/~sfkaplan/downloads/page-image-traces/vmtrace.bz2
+  404  wget www.cs.amherst.edu/~sfkaplan/downloads/page-image-traces/vmtrace.filtered.bz2
+  405  wget www.cs.amherst.edu/~sfkaplan/downloads/page-image-traces/vmtrace.filtered
+  406  wget https://github.com/santolucito/CCache/blob/master/vmtrace.filtered?raw=true
+  407  ls
+  408  vi history.txt 
+  409  ./test-compression vmtrace-filtered.gz
+  410  ./test-compression vmtrace-filtered.gz
+  411  ./test-compression vmtrace-filtered.gz
+  412  vi history.txt 
+  413  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  414  vi history.txt 
+  415  gzip vmtrace.filtered vmtrace.filtered2
+  416  gzip vmtrace.filtered2 vmtrace.filtered
+  417  gzip vmtrace.filtered
+  418  ls
+  419  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  420  ls
+  421  vi history.txt 
+  422  gunzip < WKdm.results | less
+  423  gunzip < WK2.results | less
+  424  ls -al
+  425  clear
+  426  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  427  amke
+  428  make
+  429  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  430  vi test-compression.cc
+  431  ls
+  432  make clean
+  433  ls
+  434  make
+  435  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  436  vi test-compression.cc 
+  437  make
+  438  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  439  vi test-compression.cc 
+  440  make
+  441  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  442  make
+  443  vi test-compression.cc 
+  444  make
+  445  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  446  vi test-compression.cc 
+  447  make
+  448  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  449  :q
+  450  vi test-compression.cc 
+  451  make
+  452  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  453  vi test-compression.cc 
+  454  make
+  455  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  456  ls
+  457  gunzip < vmtrace.filtered.gz | less
+  458  make clean
+  459  make
+  460  vi TraceRecord.cc 
+  461  vi TraceRecord.cc 
+  462  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  463  vi test-compression.cc 
+  464  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  465  make
+  466  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  467  bunzip2 espresso-13-page-reduction.bz2 -v
+  468  ls
+  469  gzip espresso-13-page-reduction 
+  470  ls
+  471  ./test-compression espresso-13-page-reduction.gz 4096 no 2000000 8
+  472  ./test-compression espresso-13-page-reduction.gz 4096 no 2000000
+  473  ls
+  474  gunzip < WK2.results | less
+  475  vi test-compression.cc
+  476  make
+  477  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  478  vi test-compression.cc
+  479  make
+  480  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  481  make
+  482  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  483  vi test-compression.cc
+  484  make
+  485  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  486  vi test-compression.cc
+  487  make
+  488  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  489  vi test-compression.cc
+  490  make
+  491  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  492  :q
+  493  vi test-compression.cc
+  494  make
+  495  vi test-compression.cc
+  496  make
+  497  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  498  vi test-compression.cc
+  499  make
+  500  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  501  vi test-compression.cc
+  502  make
+  503  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  504  vi test-compression.cc
+  505  make
+  506  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  507  vi test-compression.cc
+  508  make
+  509  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  510  vi test-compression.cc
+  511  vi CompressionAlgorithmTester.cc 
+  512  make
+  513  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  514  vi CompressionAlgorithmTester.cc 
+  515  make
+  516  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  517  vi CompressionAlgorithmTester.cc 
+  518  make
+  519  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  520  vi CompressionAlgorithmTester.cc 
+  521  cd WKdm
+  522  ls
+  523  vi WKdm.c
+  524  cd ..
+  525  ls
+  526  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  527  vi WK2Tester.cc
+  528  make
+  529  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  530  vi WK2Tester.cc
+  531  make
+  532  vi WK2Tester.cc
+  533  make
+  534  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  535  make
+  536  vi WK2Tester.cc 
+  537  make
+  538  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  539  make clean
+  540  make
+  541  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  542  vi WK2Tester.cc 
+  543  make
+  544  make clean
+  545  make
+  546  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  547  vi WK2Tester.cc 
+  548  make
+  549  make clean
+  550  make
+  551  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  552  vi WK2Tester.cc 
+  553  cd WK2
+  554  ls
+  555  ./testit 
+  556  gcc -o -c testit.c
+  557  vi ../history.txt 
+  558  gcc -o -c testit.c WK2.c -lm
+  559  logout
+  560  ls -l
+  561  gcc -c -g -DDEBUG_WK -O4 WK.c
+  562  gcc -c -g -DDEBUG_WK -O4 WK2.c
+  563  cd ..
+  564  ldd test-compression
+  565  make
+  566  cd Thesis/CCache/
+  567  ls
+  568  cd WKdm
+  569  sl
+  570  ls
+  571  cd ..
+  572  ls
+  573  ./test-compression vmtrace.filtered.gz 
+  574  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  575  vi test-compression.cc 
+  576  vi CompressionAlgorithmTester.cc 
+  577  make clean
+  578  make
+  579  emacs &
+  580  history
+  581  ./test-compression vmtrace.filtered.gz 4096 no 2000000 8
+  582  history
+  583  ls
+  584  history
+  585  logout
+  586  ls
+  587  cd Thesis/
+  588  ls
+  589  cd CCache/
+  590  ls
+  591  vi Makefile 
+  592  make
+  593  make clean
+  594  make
+  595  vi Makefile 
+  596  make
+  597  vi Makefile 
+  598  make
+  599  make clean
+  600  make
+  601  make
+  602  vi Makefile 
+  603  make
+  604  make
+  605  cd
+  606  ls
+  607  ls -al
+  608  cd ..
+  609  ls
+  610  cd ..
+  611  ls
+  612  cd usr/
+  613  l
+  614  ls
+  615  cd local/
+  616  ls
+  617  cd
+  618  cd Thesis/
+  619  cd CCache/
+  620  ls
+  621  vi Makefile 
+  622  make
+  623  vi Makefile 
+  624  make
+  625  vi Makefile 
+  626  make
+  627  make LDFLAGS=-L/usr/local/lib
+  628  make 
+  629  make
+  630  make clean
+  631  make
+  632  make clean
+  633  make LDFLAGS=-L /usr/local/lib
+  634  make LDFLAGS=-L/usr/local/lib
+  635  logout
+  636  cd Thesis/
+  637  cd CCache/
+  638  make
+  639  ls
+  640  vi Makefile 
+  641  logout
+  642  ls
+  643  cd Thesis/
+  644  ls
+  645  cd CCache/
+  646  ls
+  647  emacs test
+  648  ls
+  649  make
+  650  make
+  651  cd 
+  652  cd ../..
+  653  cd usr/local/lib
+  654  ls
+  655  cd
+  656  cd Thesis/CCache/
+  657  ls
+  658  make
+  659  ls
+  660  cd lzo
+  661  ls
+  662  ./configure --prefix=$HOME/my-lzo-install
+  663  ls
+  664  vi INSTALL 
+  665  make
+  666  vi INSTALL 
+  667  make check
+  668  make test
+  669  make install
+  670  cd ..
+  671  make
+  672  vi Makefile 
+  673  cd..
+  674  cd ..
+  675  ls
+  676  cd ..
+  677  ls
+  678  cd Thesis/CCache/
+  679  vi Makefile 
+  680  make
+  681  echo $PATH
+  682  env
+  683  echo LD_LIBRARY_PATH
+  684  vi Makefile 
+  685  vi Makefile 
+  686  echo $PATH
+  687  echo $LD_LIBRARY_PATH
+  688  echo $PATH
+  689  echo $HOME
+  690  cd $HOME
+  691  ls
+  692  mkdir libs
+  693  mv my-lzo-install/ libs
+  694  ls
+  695  PATH=$PATH:$HOME/libs
+  696  echo $PATH
+  697  cd Thesis/CCache/
+  698  cd lzo
+  699  cd ..
+  700  make
+  701  env
+  702  make
+  703  vi Makefile 
+  704  make
+  705  vi Makefile 
+  706  make
+  707  LD_LIBRARY_PATH=$HOME/libs
+  708  vi Makefile 
+  709  make
+  710  VPATH=$HOME/libs
+  711  make
+  712  env
+  713  echo $VPATH
+  714  vi Makefile 
+  715  make
+  716  echo $HOME
+  717  vi Makefile 
+  718  mak
+  719  make
+  720  ls
+  721  cd lzo
+  722  ls
+  723  vi Makefile
+  724  make -m32 instal
+  725  make -m32 install
+  726  make install -m32
+  727  ls
+  728  cd Thesis/
+  729  ls
+  730  cd CCache/
+  731  ls
+  732  ls
+  733  cd Thesis/
+  734  ls
+  735  cd CCache/
+  736  ls
+  737  make
+  738  logout
+  739  ls
+  740  cd Thesis/
+  741  cd CCache/
+  742  ls
+  743  ls
+  744  ls
+  745  ls
+  746  cd Thesis/
+  747  ls
+  748  cd CCache/
+  749  ls
+  750  cd ..
+  751  ./test-compression CCache/vmtrace.filtered.gz 4096 200000 8
+  752  ls
+  753  cd Thesis/
+  754  ls
+  755  cd test-compression 
+  756  cd CCache/
+  757  make
+  758  cd
+  759  ls
+  760  cd libs/
+  761  ls
+  762  cd my-lzo-install/
+  763  ls
+  764  cd
+  765  ls
+  766  cd Thesis/CCache/
+  767  ls
+  768  vi Makefile 
+  769  cd ~
+  770  ls
+  771  cd 
+  772  cd ..
+  773  ls
+  774  cd ..
+  775  ls
+  776  cd usr/bin/
+  777  ls
+  778  dpush
+  779  push d
+  780  pushd
+  781  push .
+  782  pushd .
+  783  popd
+  784  cd
+  785  cd Thesis/
+  786  cd CCache/
+  787  make
+  788  pushd
+  789  cd ~/../../usr/bin/ld
+  790  cd ~/../../usr/local/lib
+  791  ls
+  792  pushd .
+  793  cd ~/Thesis/CCache/
+  794  ls
+  795  make
+  796  cd ..
+  797  ls
+  798  ./test-compression CCache/vmtrace.filtered.gz 4096 200000 8
+  799  ldd test-compression 
+  800  file test-compression 
+  801  uname -a
+  802  pwd
+  803  ls -l
+  804  cd CCache/
+  805  ll
+  806  grep "Kernel" *
+  807  cd ..
+  808  ls -l
+  809  cd CCache/
+  810  ls -l
+  811  scp vmtrace.filtered.gz ../test-compression sfkaplan@castor.cs.amherst.edu
+  812  scp vmtrace.filtered.gz ../test-compression sfkaplan@castor.cs.amherst.edu:.
+  813  ssh sfkaplan@castor.cs.amherst.edu
+  814  ls -l
+  815  make
+  816  make
+  817  file /usr/local/lib/liblzo.a
+  818  cd ..
+  819  cd 
+  820  ls
+  821  cd libs/
+  822  ls
+  823  cd ..
+  824  ll
+  825  cd Thesis/CCache/
+  826  g++ -L ./lzo/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  827  g++ -L ../../libs/my-lzo-install/lib/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  828  pushd ../..
+  829  cd libs/
+  830  ll
+  831  cd my-lzo-install/
+  832  ll
+  833  cd include/
+  834  ll
+  835  cd ../lib/
+  836  ll
+  837  cd ..
+  838  ll
+  839  cd ..
+  840  ll
+  841  cd ..
+  842  ll
+  843  cd Thesis/
+  844  ll
+  845  cd CCache/
+  846  ll
+  847  cd lzo
+  848  ll
+  849  ./configure --help
+  850  ./configure --help | less
+  851  uname
+  852  uname -a
+  853  ls
+  854  less INSTALL 
+  855  less README 
+  856  grep -R 32 *
+  857  grep -R 32 * | less
+  858  ./configure --help | less
+  859  ./configure CFLAGS="-m32"
+  860  make
+  861  ls -l
+  862  history
+  863  g++ -L ./lzo/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  864  cd ..
+  865  g++ -L ./lzo/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  866  ls -l lzo
+  867  ls -l lzo/src/
+  868  ls -l lzo/
+  869  find lzo -name "liblzo.a"
+  870  g++ -L ./lzo/src/.libs/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  871  cd ../WKdm
+  872  ls -l
+  873  cd WKdm
+  874  ls -l
+  875  gcc -O4 -c WKdm.c
+  876  gcc -O4 -c -m32 WKdm.c
+  877  cd ../WK2
+  878  ls -l
+  879  gcc -O4 -m32 -c WK2.c
+  880  cd ../lzrw1/
+  881  ls -l
+  882  gcc -O4 -m32 -c lzrw1.c
+  883  cd ..
+  884  history
+  885  g++ -L ./lzo/src/.libs/ -g -O2 -m32 -o ./test-compression test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o WKdm/WKdm.o WK2/WK2.o lzrw1/lzrw1.o  -llzo -lz -lm -lrt
+  886  ls
+  887  ./test-compression vmtrace.filtered.gz 4096 no 200000 8
+  888  ls
+  889  gunzip < WKdm.results | less
+  890  ls
+  891  gunzip < WKdm.results | less
+  892  ls -al
+  893  history
+  894  history | less
+  895  grep "git" history
+  896  history | less
+  897  git add *
+  898  vi .gitignore 
+  899  git add .gitignore 
+  900  git commit -m "include .o files"
+  901  git push master
+  902  git status
+  903  git push origin master
+  904  git push git@github.com:santolucito/CCache.git master
+  905  git push git@github.com:santolucito/CCache.git master
+  906  history
+  907  history > history12102012.txt
