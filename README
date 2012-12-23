@@ -2,3 +2,8 @@ This is my Senior Thesis at Amherst College
 
 This is just here in case I lose everything or really screw something up
 
+The "test-compression" will take an LRU trace and spit out a "compression trace"
+
+A "compression trace" is a record of each page that went in/out of th cache (or something) when the LRU trace was collected
+
+The size-adapt dir will take that compression trace and do the actual adaptive compressed caching experiment.
