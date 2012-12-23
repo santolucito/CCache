@@ -4,10 +4,10 @@ public class Analyze{
 
 public static void main(String args[]){
   
-  ArrayList<Trace> LZOdata = Reader.read("../LZO.raw");
-  ArrayList<Trace> LZRW1data = Reader.read("../LZRW1.raw");
-  ArrayList<Trace> WK2data = Reader.read("../WK2.raw");
-  ArrayList<Trace> WKdmdata = Reader.read("../WKdm.raw");
+  ArrayList<Trace> LZOdata = Reader.read("../LZO.results");
+  ArrayList<Trace> LZRW1data = Reader.read("../LZRW1.results");
+  ArrayList<Trace> WK2data = Reader.read("../WK2.results");
+  ArrayList<Trace> WKdmdata = Reader.read("../WKdm.results");
  
   System.out.println("LZO average compression time " + average(LZOdata));
   System.out.println("LZRW1 average compression time " + average(LZRW1data));

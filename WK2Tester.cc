@@ -98,6 +98,7 @@ WK2Tester::performDecompressionTest
   //stop
   clock_gettime(CLOCK_REALTIME, &stop);
 
+  //this doesnt work appropriatly time is >1 sec
   accum = (stop.tv_sec - start.tv_sec)
         + (stop.tv_nsec - start.tv_nsec);
         /// 1000000000.0;

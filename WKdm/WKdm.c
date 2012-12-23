@@ -596,7 +596,8 @@ WKdm_compress (WK_word* src_buf,
 				 next_full_patt);
 #ifdef WK_DEBUG
      printf("Packing of queue positions stopped at %u\n", boundary_tmp);
-#endif WK_DEBUG
+#endif 
+//WK_DEBUG
 
     /* Record (into the header) where we stopped packing queue positions,
      * which is where we will start packing low bits.

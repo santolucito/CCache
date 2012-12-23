@@ -50,7 +50,6 @@ CompressionAlgorithmTester::~CompressionAlgorithmTester () {
 void 
 CompressionAlgorithmTester::test (TraceRecord* currentRecord,
 				  unsigned int uncompressedBytes) {
-
   // If requested by the user and the given algorithm requires such a
   // thing, use the fixed pages images in which bytes have been
   // reversed for endian differences.

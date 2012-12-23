@@ -54,13 +54,13 @@
 #define LZO_NO_ASM 1
 
 /* Define for machines that can access unaligned short words.  */
-#define LZO_UNALIGNED_OK_2 1
+/* #undef LZO_UNALIGNED_OK_2 */
 
 /* Define for machines that can access unaligned words.  */
-#define LZO_UNALIGNED_OK_4 1
+/* #undef LZO_UNALIGNED_OK_4 */
 
 /* Define to your architecture name.  */
-#define MFX_ARCH "i386"
+#define MFX_ARCH "unknown"
 
 /* Define for machines where ".align 4" means align to a 4 byte boundary.  */
 #define MFX_ASM_ALIGN_BYTES 1
@@ -84,7 +84,7 @@
 #define MFX_BYTE_ORDER 1234
 
 /* Define to your CPU name.  */
-#define MFX_CPU "i686"
+#define MFX_CPU "x86_64"
 
 /* Define if your memcmp is broken.  */
 /* #undef NO_MEMCMP */

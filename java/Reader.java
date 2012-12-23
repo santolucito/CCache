@@ -5,16 +5,22 @@ public class Reader{
 
 public static void main(String[] args){
   
+ if(args.length!=1){
+	System.out.println("Usage: java Reader <uncompressed processed trace>");
+	System.exit(0);
+  } 
+
   ArrayList<Trace> traces = read(args[0]);
   
-  int sumCTimes = 0;
+  long sumCTimes = 0;
   int dataLength =0;
   for(Trace t:traces){
-    sumCTimes+=t.cTime;
-    dataLength++;
+    sumCTimes+=t.cTime/1000;
+    if(true)dataLength++;
+    //if(dataLength%100==0)System.out.println(sumCTimes);
   }
 
-  System.out.println(args[0]+" average cTime (nsec)- "+((double)sumCTimes/dataLength));
+  System.out.println(args[0]+"\naverage cTime (microsec): "+((double)sumCTimes/dataLength)+"\ntotal Time (sec): "+sumCTimes/1000000.0+"\npage swaps: "+dataLength);
 }//main()
 
 
@@ -32,7 +38,7 @@ public static void main(String[] args){
   DataInputStream in = new DataInputStream(fstream);
   BufferedReader br = new BufferedReader(new InputStreamReader(in));
   String strLine;
-  //Read File Line By Line
+//Read File Line By Line
   int numberOfLines =0;
   String[] data = new String[15];
   while ((strLine = br.readLine()) != null)   {
@@ -57,7 +63,6 @@ public static void main(String[] args){
     }catch (Exception e){//Catch exception if any
   System.err.println("Error: " + e.getMessage());
   }
-
   return allTraces;
 }//read()
 

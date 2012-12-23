@@ -20,7 +20,7 @@
 
 ### LZO_DEBUG = -DLZO_DEBUG
 ### LZO_DEBUG = -DLZO_DEBUG -g -fno-omit-frame-pointer
-SHELL = /bin/bash
+SHELL = /bin/sh
 
 srcdir = .
 top_srcdir = ..
@@ -45,10 +45,10 @@ pkglibdir = $(libdir)/lzo
 pkgincludedir = $(includedir)/lzo
 top_builddir = ..
 
-ACLOCAL = ${SHELL} /home/marksantolucito/Thesis/test-compression/lzo/acconfig/missing --run aclocal-1.6
-AUTOCONF = ${SHELL} /home/marksantolucito/Thesis/test-compression/lzo/acconfig/missing --run autoconf
-AUTOMAKE = ${SHELL} /home/marksantolucito/Thesis/test-compression/lzo/acconfig/missing --run automake-1.6
-AUTOHEADER = ${SHELL} /home/marksantolucito/Thesis/test-compression/lzo/acconfig/missing --run autoheader
+ACLOCAL = ${SHELL} /home/msantolucito13/Thesis/CCache/lzo/acconfig/missing --run aclocal-1.6
+AUTOCONF = ${SHELL} /home/msantolucito13/Thesis/CCache/lzo/acconfig/missing --run autoconf
+AUTOMAKE = ${SHELL} /home/msantolucito13/Thesis/CCache/lzo/acconfig/missing --run automake-1.6
+AUTOHEADER = ${SHELL} /home/msantolucito13/Thesis/CCache/lzo/acconfig/missing --run autoheader
 
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 INSTALL = /usr/bin/install -c
@@ -67,15 +67,15 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 host_alias = 
-host_triplet = i686-pc-linux-gnu
+host_triplet = x86_64-unknown-linux-gnu
 
 EXEEXT = 
 OBJEXT = o
 PATH_SEPARATOR = :
-AMTAR = ${SHELL} /home/marksantolucito/Thesis/test-compression/lzo/acconfig/missing --run tar
+AMTAR = ${SHELL} /home/msantolucito13/Thesis/CCache/lzo/acconfig/missing --run tar
 AS = @AS@
 ASFLAGS =  -x assembler-with-cpp
-AWK = mawk
+AWK = gawk
 CC = gcc
 CFLAGS_GCC_OMIT_FRAME_POINTER = -fomit-frame-pointer
 CFLAGS_O = 
@@ -92,25 +92,25 @@ LN_S = ln -s
 LZO_ASM_OBJECTS = 
 LZO_CFLAGS = 
 MAINT = #
-MFX_ARCH = i386
+MFX_ARCH = unknown
 MFX_CC = GCC
-MFX_CPU = i686
+MFX_CPU = x86_64
 MOSTLYCLEANFILES = *.i
 NASM = 
 OBJDUMP = @OBJDUMP@
 PACKAGE = lzo
 RANLIB = ranlib
-SRC_VPATH = /i386/src
+SRC_VPATH = 
 STRIP = strip
 VERSION = 1.08
 am__include = include
 am__quote = 
-install_sh = /home/marksantolucito/Thesis/test-compression/lzo/acconfig/install-sh
+install_sh = /home/msantolucito13/Thesis/CCache/lzo/acconfig/install-sh
 liblzo = $(top_builddir)/src/liblzo.la
 ltest_LIBS = 
 
 INCLUDES = -I$(top_srcdir)/include
-CFLAGS =  -O2 -Wall -Wcast-align -Wcast-qual -Wwrite-strings -fno-strength-reduce -fstrict-aliasing $(CFLAGS_O) $(CFLAGS_W) $(LZO_DEBUG)
+CFLAGS = -m32 -O2 -Wall -Wcast-align -Wcast-qual -Wwrite-strings -fstrict-aliasing $(CFLAGS_O) $(CFLAGS_W) $(LZO_DEBUG)
 
 noinst_PROGRAMS = ltest
 
