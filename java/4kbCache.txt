@@ -1,0 +1,12 @@
+8087 - skipping page, bad time reading
+80c7 - skipping page, bad time reading
+80c3 - skipping page, bad time reading
+80c2 - skipping page, bad time reading
+80b3 - skipping page, bad time reading
+80bf - skipping page, bad time reading
+80b6 - skipping page, bad time reading
+80b6 - skipping page, bad time reading
+../WK2.results
+average compression Time (microsec): 12.401447133615882
+total compression Time (sec): 5.337186
+pages in/out: 430368
