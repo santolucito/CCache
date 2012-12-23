@@ -1,9 +1,9 @@
 CC = g++
-CFLAGS = -g -O2 -m32
+CFLAGS = -g -O3 -m32
 VPATH = home/msantolucito13/libs
 INCLUDEFLAGS = -I ./lzo/include/ -I ./WKdm/ -I ./WK2/ -I ./lzrw1/
 LDFLAGS = -llzo -lz -lm -lrt
-LDPATH = -L ./lzo/
+LDPATH = -L ./lzo/src/.libs/
 OBJS = test-compression.o TraceRecord.o CompressionAlgorithmTester.o safezlib.o \
 	WKdmTester.o LZOTester.o LZRW1Tester.o WK2Tester.o
 COMPRESSORS = WKdm/WKdm.o \

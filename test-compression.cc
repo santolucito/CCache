@@ -53,10 +53,10 @@ initializeTesterVector
  const bool fixEndianness) {
     
   // Add any desired testers here.
-  initVector.push_back(new WK2Tester("WK2.results", fixEndianness));
-  initVector.push_back(new WKdmTester("WKdm.results", fixEndianness)); 
-  initVector.push_back(new LZOTester("LZO.results", fixEndianness));
-  initVector.push_back(new LZRW1Tester("LZRW1.results",
+  initVector.push_back(new WK2Tester("WK2.results.gz", fixEndianness));
+  initVector.push_back(new WKdmTester("WKdm.results.gz", fixEndianness)); 
+  initVector.push_back(new LZOTester("LZO.results.gz", fixEndianness));
+  initVector.push_back(new LZRW1Tester("LZRW1.results.gz",
   				       fixEndianness));
 
 }
@@ -90,7 +90,7 @@ processTrace (gzFile inputFile,
   // algorithm.
   vector<CompressionAlgorithmTester*> testerVector;
   initializeTesterVector(testerVector, fixEndianness);
-
+  cout << recordsAtATime;
   // Create a vector of trace records.
   TraceRecord* records[recordsAtATime];
   for (unsigned int recordNumber = 0;
