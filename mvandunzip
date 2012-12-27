@@ -1,0 +1,6 @@
+#a script to move the output files and unzip them
+#i hope
+path="outputFiles/out"$1
+mkdir $path
+mv *.gz $path
+gunzip $path/*.gz

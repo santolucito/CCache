@@ -1,0 +1,40 @@
+#a script to run test-compression, prep results for analysis, & run analysis
+
+
+#run and analyze one at a time
+./test-compression traces/espresso-13-page-reduction.gz 4096 no 3000 4000
+./mvandunzip espresso
+cd java
+java Analyze outespresso > espresso.txt
+cd ..
+
+./test-compression traces/gcc-2.7.2-26-page-reduction.gz 4096 no 3000 4000
+./mvandunzip gcc
+cd java
+java Analyze outgcc > gcc.txt
+cd ..
+
+./test-compression traces/gnuplot-11-page-reduction.gz 4096 no 3000 4000
+./mvandunzip gnuplot
+cd java
+java Analyze outgnuplot > gnuplot.txt
+cd ..
+
+./test-compression traces/grobner-5-page-reduction.gz 4096 no 3000 4000
+./mvandunzip grobner
+cd java
+java Analyze outgrobner > grobner.txt
+cd ..
+
+./test-compression traces/p2c-22-page-reduction.gz 4096 no 3000 4000
+./mvandunzip p2c
+cd java
+java Analyze outp2c > p2c.txt
+cd ..
+
+#send the files to me
+cd java
+echo | mutt -a espresso.txt -a gcc.txt -a gnuplot.txt -a grobner.txt -a p2c.txt -s “results” mark24@comcast.net
+cd ..
+
+echo "Done!"
