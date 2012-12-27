@@ -1,0 +1,4 @@
+LZO average compression time (nsec) 8669.001122598662
+LZRW1 average compression time (nsec) 11350.764264580173
+WK2 average compression time (nsec) 12714.609023751127
+WKdm average compression time (nsec) 5374.235845767009

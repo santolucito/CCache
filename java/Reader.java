@@ -15,12 +15,12 @@ public static void main(String[] args){
   long sumCTimes = 0;
   int dataLength =0;
   for(Trace t:traces){
-    sumCTimes+=t.cTime/1000;
-    if(true)dataLength++;
+    sumCTimes+=t.cTime;
+    dataLength++;
     //if(dataLength%100==0)System.out.println(sumCTimes);
   }
 
-  System.out.println(args[0]+"\naverage cTime (microsec): "+((double)sumCTimes/dataLength)+"\ntotal Time (sec): "+sumCTimes/1000000.0+"\npage swaps: "+dataLength);
+  System.out.println(args[0]+"\naverage cTime (nsec): "+((double)sumCTimes/dataLength)+"\ntotal Time (microsec): "+sumCTimes/1000000.0+"\npage swaps: "+dataLength);
 }//main()
 
 
