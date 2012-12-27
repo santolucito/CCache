@@ -12,14 +12,16 @@
 // Both (a) and (b) above are a result of choosing the most straightforward
 // first approximation of the adaptive compressed memory simulator. Later,
 // more efficient (or more accurate) versions can be implemented, but for now
-// correctness and implementation speed are crucial.
+// correctness and implementation speed are crucial
+
+using namespace std;
 
 #include "lruobj.h"
 #include "compinput.h"
-#include <strstream.h>
-#include <math.h>
-#include <stdlib.h>
-#include <map.h>
+#include <sstream>
+#include <cmath>
+#include <cstdlib>
+#include <map>
 
 // How many possibilities are there for the ratio of compressed to total memory?
 #define NO_BENEFIT       -1
@@ -28,6 +30,8 @@
 #define forall(iterator) for (int iterator = 0; \
 				iterator < NUM_EARLY_POINTS; \
 				iterator++)
+#define STANDALONE_COMPADAPTIVE -1
+
 
 // REVIEW: maybe move ASSERT to another file. Ok for now: keep file number small
 #ifdef DEBUG
@@ -944,7 +948,7 @@ void CompressionLruQueue::evict_from_uncompressed() {
 #ifdef STANDALONE_COMPADAPTIVE
 // For testing
 
-void main(int argc, char** argv) {
+int main(int argc, char** argv) {
 
   CompInput my_in(&cin);
 
@@ -969,18 +973,18 @@ void main(int argc, char** argv) {
   double dirty_ratio_estimate;
   double decayf;
   double missweight;
-  (istrstream)(argv[1]) >> msize;
-  (istrstream)(argv[2]) >> filter_size;  
+  (istringstream)(argv[1]) >> msize;
+  (istringstream)(argv[2]) >> filter_size;  
   forall (i) 
-    (istrstream)(argv[3+i]) >> c_ratio[i];
-  (istrstream)(argv[3+NUM_EARLY_POINTS]) >> compressibility_estimate; 
-  (istrstream)(argv[4+NUM_EARLY_POINTS]) >> write_cost; 
-  (istrstream)(argv[5+NUM_EARLY_POINTS]) >> read_cost; 
-  (istrstream)(argv[6+NUM_EARLY_POINTS]) >> compression_cost_estimate; 
-  (istrstream)(argv[7+NUM_EARLY_POINTS]) >> decompression_cost_estimate; 
-  (istrstream)(argv[8+NUM_EARLY_POINTS]) >> dirty_ratio_estimate; 
-  (istrstream)(argv[9+NUM_EARLY_POINTS]) >> decayf; 
-  (istrstream)(argv[10+NUM_EARLY_POINTS]) >> missweight; 
+    (istringstream)(argv[3+i]) >> c_ratio[i];
+  (istringstream)(argv[3+NUM_EARLY_POINTS]) >> compressibility_estimate; 
+  (istringstream)(argv[4+NUM_EARLY_POINTS]) >> write_cost; 
+  (istringstream)(argv[5+NUM_EARLY_POINTS]) >> read_cost; 
+  (istringstream)(argv[6+NUM_EARLY_POINTS]) >> compression_cost_estimate; 
+  (istringstream)(argv[7+NUM_EARLY_POINTS]) >> decompression_cost_estimate; 
+  (istringstream)(argv[8+NUM_EARLY_POINTS]) >> dirty_ratio_estimate; 
+  (istringstream)(argv[9+NUM_EARLY_POINTS]) >> decayf; 
+  (istringstream)(argv[10+NUM_EARLY_POINTS]) >> missweight; 
 
   CompAdaptive q(msize, filter_size, c_ratio, compressibility_estimate, 
 		 write_cost, read_cost, compression_cost_estimate, 

@@ -3,8 +3,8 @@
 
 #include "general.h"
 #include "input.h"
-#include <iostream.h>
-#include <algo.h>
+#include <iostream>
+//#include <algo.c>
 
 #define LOWER_LIMIT -2
 #define NOEVICT -3

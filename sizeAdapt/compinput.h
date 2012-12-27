@@ -2,8 +2,8 @@
 #define COMPINPUT_H
 
 #include "general.h"
-#include <iostream.h>
-#include <stdio.h>
+#include <iostream>
+#include <cstdio>
 
 struct EventInfo {
   bool compulsory;

@@ -2,7 +2,7 @@
 #define INPUT_H
 
 #include "general.h"
-#include <iostream.h>
+#include <iostream>
 
 // "Input" hides the details of reading the block numbers from input. If we end
 // up having more than one methods of input they could all be expressed as
