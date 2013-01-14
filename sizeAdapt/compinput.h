@@ -33,11 +33,14 @@ public:
     char buffer[256];
     char compulsory_tag;  
     in_stream->getline(buffer, 256);
-    if (buffer[0] == '(') // First line of input
+    if (buffer[0] == '('){ // First line of input
       in_stream->getline(buffer, 256);
+      cout << "reading first line";
+    }
     if (buffer[0] == ')') {
       in_stream->getline(buffer, 256);
       // ASSERT(end_of_input());
+      cout << "done reading";
       return temp;
     }
     sscanf(buffer, "  ( %c %x %d %lf %c %x %d %lf )\n",
