@@ -950,7 +950,7 @@ void CompressionLruQueue::evict_from_uncompressed() {
 
 int main(int argc, char** argv) {
   
-  CompInput my_in(&cin); //the address of the input stream
+  CompInput my_in(&cin); //the address of the input stream (I think)
 
   if (argc != 11 + NUM_EARLY_POINTS) {
     cerr << "usage: " << argv[0] << 

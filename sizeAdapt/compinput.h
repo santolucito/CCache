@@ -40,7 +40,6 @@ public:
     if (buffer[0] == ')') {
       in_stream->getline(buffer, 256);
       // ASSERT(end_of_input());
-      cout << "done reading";
       return temp;
     }
     sscanf(buffer, "  ( %c %x %d %lf %c %x %d %lf )\n",
@@ -54,7 +53,10 @@ public:
 	   &(temp.compression_time));
     // ASSERT (compulsory_tag == 'C' || compulsory_tag == 'F');
     temp.compulsory = (compulsory_tag == 'C');
+    cout << temp.fetched_page_number;
+    cout << "\n";
     return temp;
+
   }
 };
 
