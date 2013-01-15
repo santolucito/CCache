@@ -35,7 +35,6 @@ public:
     in_stream->getline(buffer, 256);
     if (buffer[0] == '('){ // First line of input
       in_stream->getline(buffer, 256);
-      cout << "reading first line";
     }
     if (buffer[0] == ')') {
       in_stream->getline(buffer, 256);
@@ -53,13 +52,10 @@ public:
 	   &(temp.compression_time));
     // ASSERT (compulsory_tag == 'C' || compulsory_tag == 'F');
     temp.compulsory = (compulsory_tag == 'C');
-    cout << temp.fetched_page_number;
-    cout << "\n";
     return temp;
-
+  
   }
 };
-
 #endif
 
 /* Test code
