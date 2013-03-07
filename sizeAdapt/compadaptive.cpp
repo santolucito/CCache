@@ -440,7 +440,6 @@ protected:
   
   void simulate_compress(BlockNumber block) {
     BlockInfo &info = block_info[block];
-
     execution_time += info.compression_time;
     // Update statistics (averages) as a result of compressing one more page
     double total_compression_time = cost_of_compression *
@@ -472,7 +471,7 @@ protected:
       // The end of the compressed memory should never be beyond the recency
       // position tracked in our queue. REVIEW: should this be an ASSERT or not?
       if (!lru_stats_sim->valid_qpos(end_compressed_qpos - 1 )) {
-	cerr << "ERROR: compressed region exceeded recency queue" << endl;
+	cerr << "ERROR1: compressed region exceeded recency queue" << endl;
 	exit(1);
       }
     }
@@ -486,7 +485,7 @@ protected:
     // The end of the compressed memory should never be beyond the recency
     // position tracked in our queue. REVIEW: should this be an ASSERT or not?
     if (!lru_stats_sim->valid_qpos(end_compressed_qpos - 1 )) {
-      cerr << "ERROR: compressed region exceeded recency queue" << endl;
+      cerr << "ERROR: compressed region exceeded recency queue" << start_compressed_qpos << " " << end_compressed_qpos << " " << lru_stats_sim->max_size << endl;
       exit(1);
     }
   }
@@ -529,6 +528,8 @@ public:
 	simulate_uncompress(event_info.fetched_page_number, // miss?
 			    (lru_qpos >=end_compressed_qpos || lru_qpos == 0));
       // At this point, invariant A may not hold, but it will be restored
+     // cerr << "grow = " << grow << " shrink = " << shrink
+	//   << " startcqpos = " << start_compressed_qpos << " endcqpos = " << end_compressed_qpos << endl;
       if (grow) {
 	lru_stats_sim->compress_n_pages(1); 
 	/* 1 page may be enough, esp. if the hit is in compressed mem. */
